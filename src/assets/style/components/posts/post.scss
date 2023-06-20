@@ -1,0 +1,39 @@
+.post__container {
+    width: 100%;
+    padding: 2rem;
+    background-color: indigo;
+
+}
+
+.post {
+
+    &__box {
+        gap: 1.25rem;
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    &__col {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    &__row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        @include sm {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        @include md {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        @include lg {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+}

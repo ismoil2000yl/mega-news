@@ -1,0 +1,37 @@
+.new-posts {
+    width: 100%;
+    padding: 70px 0;
+
+    &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+
+        &__btn {
+            gap: 8px;
+            display: flex;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            padding: 12px 20px;
+            font-style: normal;
+            text-align: center;
+            border-radius: 12px;
+            align-items: center;
+            background: #F5F5F5;
+            text-transform: capitalize;
+            &-icon{
+                width: 14px;
+                height: 16px;
+            }
+        }
+    }
+
+
+}

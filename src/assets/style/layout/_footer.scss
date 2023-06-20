@@ -1,0 +1,355 @@
+.footer {
+    width: 100%;
+    height: 485px;
+    overflow: hidden;
+    background: linear-gradient(to right, #f5f5f5 20%, white 80%);
+
+    @include lg {
+        background: linear-gradient(to right, #f5f5f5 20%, white 80%);
+    }
+
+    //  576px
+    @include sm {
+        position: fixed;
+        bottom: 0;
+        height: 70px;
+        z-index: 1000;
+    }
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__desktop {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        background-color: white;
+
+        .desktop {
+            &__leftbox {
+                width: 50%;
+                height: 100%;
+                background: #f5f5f5;
+                border-radius: 0px 50px 50px 0px;
+                padding: 40px 0;
+
+                //  768px
+                @include lg {
+                    width: 100%;
+                }
+
+                .foter-newscardbox {
+                    display: grid;
+                    grid-template-columns: 400px 185px;
+                    grid-template-rows: 242px 105px;
+
+                    // margin-top: 40px;
+                    // 992px
+                    @include xl {
+                        grid-template-columns: 300px 155px;
+                    }
+
+                    // 768px
+                    @include lg {
+                        grid-template-columns: 60% 35%;
+                        gap: 5%;
+                    }
+
+                    .foter-newscard {
+                        margin-bottom: 30px;
+
+                        .newscard-title {
+                            h3 {
+                                display: flex;
+                                @include font(#3e3232, 20px, 23px, bold, 20px, "Roboto");
+
+                                .border-f1 {
+                                    margin: 5px;
+                                    display: block;
+                                    width: 4px;
+                                    height: 10px;
+                                    background: #f81539;
+                                    border-radius: 12px;
+                                }
+                            }
+                        }
+
+                        p {
+                            @include font(rgba(62, 50, 50, 0.75),
+                                14px,
+                                20px,
+                                400,
+                                0px,
+                                "Roboto"
+                            );
+                            text-transform: capitalize;
+
+                            @include xl {
+                                @include sliceText(8);
+                            }
+
+                            @include lg {
+                                @include sliceText(15);
+                            }
+                        }
+
+                        // for 2newscard
+                        ul {
+                            margin-left: 10px;
+
+                            li {
+                                @include font(#3e3232, 12px, 14px, 400, 0px, "Roboto");
+                                text-transform: capitalize;
+                                margin-bottom: 15px;
+                            }
+                        }
+
+                        // for 3newscard
+                        .letters-inputbox {
+                            width: 100%;
+                            height: 48px;
+                            position: relative;
+                            background-color: white;
+                            box-shadow: 0px 2px 32px rgba(0, 0, 0, 0.07);
+                            border-radius: 12px;
+
+                            input {
+                                position: absolute;
+                                left: 0;
+                                width: 80%;
+                                height: 100%;
+                                padding-left: 15px;
+                            }
+
+                            i {
+                                position: absolute;
+                                right: 15px;
+                                top: 30%;
+                            }
+                        }
+
+                        // for 4newscard
+                        .footer-socialbox {
+                            height: 40px;
+                            width: 90%;
+                            display: flex;
+                            justify-content: space-between;
+
+                            .instagram {
+                                display: flex;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                width: 70%;
+                                height: 100%;
+                                background: linear-gradient(262.85deg,
+                                        #f45c9f 5.57%,
+                                        #ff7563 73.65%);
+                                border-radius: 12px;
+
+                                &:hover {
+                                    background: linear-gradient(262.85deg,
+                                            #f04a92 5.57%,
+                                            #f96350 73.65%);
+                                    cursor: pointer;
+                                }
+
+                                p {
+                                    color: white;
+                                }
+                            }
+
+                            .twiter {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 22%;
+                                background: linear-gradient(227.96deg,
+                                        #2ca5e0 11.38%,
+                                        #67c9f5 84.07%);
+
+                                &:hover {
+                                    background: linear-gradient(227.96deg,
+                                            #18a1e5 11.38%,
+                                            #36abe1 84.07%);
+                                    cursor: pointer;
+                                }
+
+                                border-radius: 12px;
+                            }
+                        }
+
+                        &:nth-child(1),
+                        &:nth-child(3) {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                .privacy-box {
+                    width: 90%;
+                    height: 48px;
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background: rgba(62, 50, 50, 0.05);
+                    border-radius: 0px 12px 12px 0px;
+                    padding: 0 10px;
+
+                    h3 {
+                        @include font(rgba(62, 50, 50, 0.75), 12px, 14px, 400, 0, "Roboto");
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+            &__rightbox {
+                width: 50%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 45% 50%;
+                grid-template-rows: 403px 403px;
+                background-color: white;
+                gap: 24px;
+                padding: 40px 0;
+
+                // 768px
+                @include lg {
+                    display: none;
+                }
+
+                .item {
+                    .newscard-title {
+                        // margin-top: 40px;
+
+                        h3 {
+                            display: flex;
+                            @include font(#3e3232, 20px, 23px, 500, 20px, "Roboto");
+                            text-transform: capitalize;
+
+                            .border-f1 {
+                                margin: 5px;
+                                display: block;
+                                width: 4px;
+                                height: 10px;
+                                background: #f81539;
+                                border-radius: 12px;
+                            }
+                        }
+                    }
+
+                    .coments {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        .coment-card {
+                            width: 100%;
+                            height: 75px;
+                            background: #f5f5f5;
+                            border-radius: 12px;
+                            // margin: 20px 0;
+                            padding: 16px 0 0 16px;
+
+                            h5 {
+                                @include font(#3e3232, 16px, 19px, 500, 0, "Roboto");
+                                text-transform: capitalize;
+                            }
+
+                            p {
+                                @include font(rgba(62, 50, 50, 0.75),
+                                    12px,
+                                    14px,
+                                    400,
+                                    0,
+                                    "Roboto"
+                                );
+                                @include sliceText(1);
+                                margin-top: 8px;
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+
+                    .followers {
+                        margin-top: 55px;
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        grid-template-columns: auto auto auto;
+                        gap: 24px;
+
+                        @include xl {
+                            gap: 24px;
+                        }
+
+                        .follower-img {
+                            border-radius: 12px;
+                            transition: transform 0.15s ease-in;
+
+                            &:hover {
+                                // transform: rotateZ(10deg);
+                                transform: scale(1.1);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    &__mobile {
+        display: none;
+
+        @include sm {
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: #ffffff;
+            box-shadow: 0px -3px 9px -1px rgba(0, 0, 0, 0.05);
+            border-radius: 16px 16px 0px 0px;
+
+            .mobile-card {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    @include font(#fff, 14px, 20px, 500, 0, "Roboto");
+                    text-transform: capitalize;
+                    display: none;
+                }
+
+                img {
+                    fill: red;
+                }
+
+                &.active {
+                    background-color: #f96350;
+                    padding: 10px 16px;
+                    background: rgba(248, 21, 57, 0.75);
+                    border-radius: 12px;
+
+                    p {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

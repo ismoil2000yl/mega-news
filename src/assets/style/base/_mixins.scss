@@ -1,0 +1,163 @@
+@mixin sm {
+    @media screen and (max-width: $sm) {
+        @content;
+        .container{
+            max-width: 575px;
+        }
+    }
+}
+
+@mixin md {
+    @media screen and (max-width: $md) {
+        @content;
+        .container{
+            max-width: 766px;
+        }
+    }
+}
+
+@mixin lg {
+    @media screen and (max-width: $lg) {
+        @content;
+        .container{
+            max-width: 991px;
+        }
+    }
+}
+
+@mixin xl {
+    @media screen and (max-width: $xl) {
+        @content;
+        .container{
+            max-width: 1199px;
+        }
+    }
+}
+
+@mixin xxl {
+    @media screen and (max-width: $xxl) {
+        @content;
+        .container{
+            max-width: 1399px;
+        }
+    }
+}
+
+@mixin font(
+  $color: #000,
+  $font-size: 16px,
+  $line-height: 150%,
+  $font-weigth: 500,
+  $margin-bottom: 0px,
+  $font-family: "sans-serif"
+) {
+  color: $color;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weigth;
+  margin-bottom: $margin-bottom;
+  font-family: $font-family;
+}
+
+@mixin sliceText($num: 1, $word-break: normal) {
+    display: -webkit-box !important;
+    -webkit-line-clamp: $num !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    word-break: $word-break;
+}
+
+@mixin flexbox($flex, $jc, $ai, $fd, $gap) {
+    display: $flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    gap: $gap;
+  }
+  
+  @mixin gridLayout($grid, $gtc, $jc, $ai, $gap) {
+    display: $grid;
+    grid-template-columns: $gtc;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gap;
+  }
+  
+  @mixin input(
+    $width,
+    $height,
+    $border,
+    $outline,
+    $text-indent,
+    $border-radius,
+    $background-color,
+    $placeholder,
+    $color
+  ) {
+    width: $width;
+    height: $height;
+    border: $border;
+    outline: $outline;
+    text-indent: $text-indent;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    color: $color;
+    &::placeholder {
+      color: $placeholder;
+    }
+  }
+  
+  @mixin navLink(
+    $color,
+    $font-size,
+    $font-weight,
+    $line-height,
+    $text-transform
+  ) {
+    color: $color;
+    font-size: $font-size * 1px;
+    font-weight: $font-weight;
+    line-height: $line-height * 1px;
+    text-transform: $text-transform;
+  }
+  
+  @mixin sizes($height: default, $width: default) {
+    width: $width;
+    height: $height;
+  }
+
+  @mixin sm {
+    @media only screen and (max-width: $sm) {
+      @content;
+    }
+  }
+  
+  @mixin md {
+    @media only screen and (max-width: $md) {
+      @content;
+    }
+  }
+  
+  @mixin lg {
+    @media only screen and (max-width: $lg) {
+      @content;
+    }
+  }
+  
+  @mixin xl {
+    @media only screen and (max-width: $xl) {
+      @content;
+    }
+  }
+  
+  @mixin xxl {
+    @media only screen and (max-width: $xxl) {
+      @content;
+    }
+  }
+  
+  @mixin defaultQuery($defaultQuery) {
+    @media only screen and (max-width: $defaultQuery) {
+      @content;
+    }
+  }

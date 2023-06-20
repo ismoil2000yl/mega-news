@@ -1,0 +1,40 @@
+.football {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+        // &-image {
+        //     width: 100%;
+        //     height: 100%;
+        // }
+
+    .football-box {
+        gap: 24px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 65px 0;
+
+        &-item{
+            height: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            background-color: #FFFFFF;
+        }
+
+        &-calendar {
+            width: 25%;
+        }
+
+        &-club {
+            width: 45%;
+        }
+
+        &-final {
+            width: 30%;
+        }
+    }
+}
